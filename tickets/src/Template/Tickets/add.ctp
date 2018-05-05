@@ -1,0 +1,67 @@
+ 
+
+
+
+    <div class="clearfix"></div>
+        <!-- //w3_agileits_top_nav-->
+        <!-- /inner_content-->
+ 
+
+
+
+<div class="inner_content">
+                    <!-- /inner_content_w3_agile_info-->
+
+                    <!-- breadcrumbs -->
+                        <div class="w3l_agileits_breadcrumbs">
+                            <div class="w3l_agileits_breadcrumbs_inner">
+                                <ul>
+                                    <li><a href="#">Home</a><span>«</span></li>
+                                    
+                                    <li>Tickets</li>
+                                </ul>
+                            </div>
+                        </div>
+                    <!-- //breadcrumbs -->
+
+                    <div class="inner_content_w3_agile_info two_in">
+                      <h2 class="w3_inner_tittle">Tickets</h2>
+                                    <!-- tables -->
+                                    
+                                
+                                <div class="w3l-table-info agile_info_shadow">
+                                      <h3 class="w3_inner_tittle two">Tickets</h3>
+                                     
+                                    
+                                
+                                <div class="w3l-table-info agile_info_shadow">
+<div class="tickets form large-9 medium-8 columns content">
+     <?= $this->Flash->render() ?>
+    <?= $this->Form->create($ticket,["type"=>"file"]) ?>
+    <fieldset>
+        <legend><?= __('AGREGAR TICKET') ?></legend>
+        <?php
+            echo $this->Form->control('name',["class"=>"form-control"]);
+            echo $this->Form->control('descripcion' ,["class"=>"form-control"]);
+            
+            echo $this->Form->control('archivo',["type"=>"file"]);
+           // echo $this->Form->control('prioridad_id', ['options' => $prioridads ,"class"=>"form-control"]);
+           // echo $this->Form->control('tiempo_limite',["class"=>"form-control"]);
+            echo $this->Form->control('contratiempo_id', ['options' => $contratiempos, 'empty' => true,"class"=>"form-control" ]);
+             ?>
+    </fieldset>
+    <br><br>
+    <?= $this->Form->button(__('Submit'),["class"=>"btn btn-success"]) ?>
+    <?= $this->Form->end() ?>
+</div>
+
+
+   
+
+</div>
+            
+        </div>
+<!-- //inner_content_w3_agile_info-->
+
+    </div>
+</div>
